@@ -8,9 +8,9 @@ import Footer from "./site/Footer";
 function App() {
     return (
         <div>
-            <Header/>
-            <Body/>
-            <Footer/>
+            <Header title={'NEW HEADER'}  />
+            <Body titleForBody = {'NEW BODY'} />
+            <Footer titleForFooter = {'NEW FOOTER'} />
 
         </div>
     )

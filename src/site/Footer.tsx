@@ -1,7 +1,13 @@
-export const Footer = () => {
+
+type ForFooterType = {
+    titleForFooter: string
+
+}
+
+export const Footer = (props:ForFooterType) => {
     return (
         <>
-            Footer
+            {props.titleForFooter}
         </>
 
     )
