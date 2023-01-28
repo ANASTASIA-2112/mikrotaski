@@ -1,25 +1,33 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
-import Navbar from './components/Navbaar/Navbar';
-import Profile from "./components/Profile/MyPosts/Ptofile";
-import Dialogs from "./components/Dialogs/Dialogs";
+import Header from "./site/Нeader";
+import Body from "./site/Body";
+import Footer from "./site/Footer";
+import {NewComponent} from "./map/Map";
 
 
 
-export const App = () => {
+
+function App() {
+    const students = [
+        { id:1, name:"James", age:8}
+]
+
     return (
-        <div className="app-wrapper">
+        <div>
+            <Header title={'NEW HEADER'}  />
+            <Body titleForBody = {'NEW BODY'} />
+            <Footer titleForFooter = {'NEW FOOTER'} />
+            <NewComponent students={students } />
 
-            <Header/>
-            <Navbar/>
-            <div className={"app-wrapper-content"}>
-            <Profile/>
-        </div>
-            {/*<Dialogs/>*/}
 
         </div>
-    );
+    )
+
 }
 
+
 export default App;
+
+
+
