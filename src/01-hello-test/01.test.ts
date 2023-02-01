@@ -1,9 +1,16 @@
 import {mult, splintIntoWords, sum} from "./01";
+let a = 1;
+let b = 2;
+let c = 3;
 
+
+beforeEach  ( () => {
+     a = 1;
+     b = 2;
+     c = 3;
+})
 test('sum should be correct', () => {
-    let a = 1;
-    let b = 2;
-    let c = 3;
+
 
     //action
     let result = sum(a, b);
@@ -13,10 +20,6 @@ test('sum should be correct', () => {
 })
 
 test('sum should be correct', () => {
-    let a = 1;
-    let b = 2;
-    let c = 3;
-
     //action
     let result1 = sum(a, b);
     let result2 = sum(b, c);
@@ -28,9 +31,6 @@ test('sum should be correct', () => {
 
 
 test('multiply should be correct', () => {
-    let a = 1;
-    let b = 2;
-    let c = 3;
 
     //action
     let result1 = mult(a, b);

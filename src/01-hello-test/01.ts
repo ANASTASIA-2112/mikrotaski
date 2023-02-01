@@ -8,7 +8,8 @@ export function mult(a: number, b: number) {
 
 export function splintIntoWords(sentense: string) {
     const words = sentense.toLowerCase().split(" ")
-    return words.filter(w = > w ! == "" && w !=="-")
+
+    return words.filter(w => w !== "" )
     .map(w => w
         .replace("!", "")
         .replace(".", "")
