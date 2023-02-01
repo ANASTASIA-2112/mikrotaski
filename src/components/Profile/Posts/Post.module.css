@@ -1,0 +1,12 @@
+
+.item {
+    color: grey;
+}
+.item img {
+    width: 80px;
+
+}
+.item button {
+    background-color: snow;
+    border-radius: 30px;
+}
