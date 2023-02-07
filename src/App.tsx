@@ -19,7 +19,7 @@ export const App = () => {
             <div className='app-wrapper-content'>
                 <Dialogs/>
             </div>
-            <Profile/>
+            {/*<Profile/>*/}
         </div>
     );
 }
