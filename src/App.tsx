@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbaar/Navbar";
 import Profile from "./components/Profile/MyPosts/Ptofile";
+import Dialogs from "./components/Dialogs/Dialogs";
 
 
 
@@ -15,9 +16,10 @@ export const App = () => {
                 <Navbar/>
             </nav>
 
-            <div className='content'>
-                <Profile/>
+            <div className='app-wrapper-content'>
+                <Dialogs/>
             </div>
+            <Profile/>
         </div>
     );
 }
