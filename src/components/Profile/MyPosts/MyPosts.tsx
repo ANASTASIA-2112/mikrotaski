@@ -4,7 +4,7 @@ import Post from "../Posts/Post";
 
 
 
-const MyPosts = (props) => {
+const MyPosts = () => {
     return (
         <div>
             My posts

@@ -1,11 +1,9 @@
 import React from 'react';
 
-
-
-const Dialogs = (props) => {
-    return (
+ const Dialogs = ()=> {
+     return (
         <div>
-          Dialogs
+         Dialogs
         </div>
     )
 }
