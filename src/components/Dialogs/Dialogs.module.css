@@ -1,6 +1,23 @@
 
-.content  {
-    grid-area: c; /* одна часть /территория*/
-    background-color:lightblue;
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+
 }
 
+.dialogsItems {
+    padding: 10px;
+}
+
+.dialogsItems  .active {
+    color: gold;
+}
+
+
+.messages {
+    padding: 10px;
+}
+
+.messages.message {
+
+}

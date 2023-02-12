@@ -17,6 +17,7 @@
 .app-wrapper-content {
     grid-area: c; /* одна часть /территория*/
     background-color: lightblue;
+    padding: 10px;
 }
 
 
