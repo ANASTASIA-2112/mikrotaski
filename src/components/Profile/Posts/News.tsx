@@ -5,7 +5,7 @@ import s from './Post.module.css';
 
 
 
-const Post = (props: any) => {
+const News = (props: any) => {
 
     return (
         <div>
@@ -30,4 +30,4 @@ const Post = (props: any) => {
 );
 }
 
-export default Post;
+export default News;

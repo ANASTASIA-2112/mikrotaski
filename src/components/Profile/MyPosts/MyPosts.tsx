@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './MyPosts.module.css';
-import Post from "../Posts/Post";
+import News from "../Posts/News";
 
 
 
@@ -13,8 +13,8 @@ const MyPosts = () => {
                 <button>Add post</button>
             </div>
             <div className={s.posts}>
-                <Post message = "Hi, how are you?"/>
-                <Post message= "It is mu first post"/>
+                <News message = "Hi, how are you?"/>
+                <News message= "It is mu first post"/>
 
             </div>
         </div>
