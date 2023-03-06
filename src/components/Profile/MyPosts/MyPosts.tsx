@@ -4,6 +4,12 @@ import News from "./Posts/News";
 
 
 const MyPosts = () => {
+
+    let   PostsData = [
+        {id: 1, message: "Hi, how are you?", likeCount:12},
+        {id: 2, message: "It is mu first post",likeCount:12},
+        {id: 3, message: "Good",likeCount:12},
+    ]
     return (
         <div className={s.postsBlock}>
             <h3>My posts</h3>
@@ -16,8 +22,9 @@ const MyPosts = () => {
                 </div>
             </div>
             <div className={s.posts}>
-                <News message="Hi, how are you?"/>
-                <News message="It is mu first post"/>
+                <News message={PostsData[0].message} likeCount={PostsData[0].likeCount}/>
+                <News message={PostsData[1].message }likeCount={PostsData[0].likeCount}/>
+                <News message={PostsData[2].message }likeCount={PostsData[0].likeCount}/>
 
             </div>
         </div>
