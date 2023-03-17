@@ -1,10 +1,11 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
+import {ProfilePageType} from "../../../redux/state";
 
-const ProfileInfo = () => {
+const ProfileInfo :React.FC<ProfilePageType> = (props) => {
     return (
         <div>
-            <div>
+            <div className={s.avatar}>
                 <img src="https://smartdesignstudiolabs.files.wordpress.com/2019/01/smm-1.jpg" alt={"avatar"}/>
             </div>
 

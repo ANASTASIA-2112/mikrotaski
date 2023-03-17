@@ -1,26 +1,27 @@
 import React from 'react';
-import s from './News.module.css';
+import s from './Post.module.css';
+import {PostType} from "../../../../redux/state";
 
 
 
 
-
-const News = (props: any) => {
+const Post :React.FC<PostType> = (props) => {
 
     return (
-        <div>
             <div className={s.item}>
-                <div>
                     <img src="https://art-fresco.ru/upload/webp/iblock/ea6/ydfxmg9inko24q3bhoo6t7mlhc0inuq6.webp"/>
                     {props.message}
-                    <span>{props.likesCount}</span>
-
+                <div>
+                        <span>likeCount{props.likeCount}</span>
 
                 </div>
-            </div>
-        </div>
 
-);
+    </div>
+
+
+
+
+    );
 }
 
-export default News;
+export default Post;

@@ -12,12 +12,12 @@
     grid-template-columns: 2fr 10fr; /*сколько частей будет занимать одна колонка 2 к и 10*/
     grid-gap: 10px; /*растояние между колонками */
 }
-
 /*вставляем hnc*/
 .app-wrapper-content {
     grid-area: c; /* одна часть /территория*/
     background-color: lightblue;
     padding: 10px;
+
 }
 
 
