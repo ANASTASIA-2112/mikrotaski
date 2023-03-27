@@ -5,7 +5,7 @@ import {PostType} from "../../../../redux/state";
 
 
 
-const Post :React.FC<PostType> = (props) => {
+const Posts = (props:PostType) => {
 
     return (
             <div className={s.item}>
@@ -24,4 +24,4 @@ const Post :React.FC<PostType> = (props) => {
     );
 }
 
-export default Post;
+export default Posts;

@@ -1,7 +1,23 @@
 .postsBlock {
-    padding: 10px;
+    color: black;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+    padding: 10px 10px;
 }
 
 .posts {
     margin-top: 10px;
+}
+
+
+
+.post img {
+    width: 60px;
+    padding: 20px;
+}
+.post textarea {
+    padding: 50px;
+    display: flex;
+
 }

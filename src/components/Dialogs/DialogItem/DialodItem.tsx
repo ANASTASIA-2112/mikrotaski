@@ -7,7 +7,7 @@ import {DialogType} from "../../../redux/state";
 
 
 
-const DialogItem :React.FC< DialogType> = (props) => {
+const DialogItem = (props:DialogType) => {
     let path = "/dialogs/" + props.id
 
     return <div className={s.dialogs + " " + s.active}>

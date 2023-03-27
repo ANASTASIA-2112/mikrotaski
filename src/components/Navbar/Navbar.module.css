@@ -1,16 +1,30 @@
 .nav {
     grid-area: n;
     background-color: lightsteelblue;
-    padding: 40px;
 }
 
 .item a {
-    color: white;
     text-decoration: none;
+    float:left;
+    color: #111111;
+    text-align: center;
+    padding: 10px 10px;
+    font-family: Arial;
 
 }
+
+.item a:hover {
+    background-color: #e5e0e0;
+    border-radius: 18px;
+}
+
 .item a.activeLink {
-    color:gold;
-
+    color: #eae0e6;
 }
 
+
+/*.item img {*/
+/*    width: 400px; !* Ширина изображений *!*/
+/*    height: 200px; !* Высота изображении *!*/
+/*    object-fit: cover; !* Вписываем фотографию в область *!*/
+/*}*/

@@ -1,10 +1,11 @@
 
 .header {
     grid-area: h;
-    background-color:  lightblue ;
+    background-color:  lightblue;
 }
 /* если в нашем хидере лежит имг сделай ей размер ширину*/
 .header img {
     height: 40px;
-
+    width:200px;
+    object-fit: cover;
 }

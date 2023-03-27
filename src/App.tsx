@@ -1,27 +1,23 @@
 import React from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
-import {Route} from "react-router-dom";
-import Profile from "./components/Profile/Ptofile";
+import {Route, Routes} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Post from "./components/Profile/MyPosts/Posts/Post";
-import Music from "./components/Music/Audio";
-import Setting from "./components/Settings/Setting";
 import {StateType} from "./redux/state";
 import {Dialogs} from "./components/Dialogs/Dialogs";
+import Profile from "./components/Profile/Ptofile";
 
 
-export type AppPropsType = {
+type AppPropsType = {
     state: StateType
-
+    addPost: (postAdd:string) => void
 }
 
 
-export const App = (props: AppPropsType) => {
+export const App = (props:AppPropsType) => {
 
 
     return (
-        <Route>
 
             <div className='app-wrapper-content'>
                 <div className='app-wrapper'>
@@ -32,23 +28,20 @@ export const App = (props: AppPropsType) => {
                     <Navbar />
                 </nav>
 
+              <Routes>
                     <Route path={"/dialogs"}
-                           component={() => <Dialogs
-                               dialogs={props.state.dialogsPage.dialogs}
-                               message={props.state.dialogsPage.message}
-                           />}/>
+                       element={ <Dialogs
+                             dialogs={props.state.dialogsPage.dialogs}
+                             message={props.state.dialogsPage.message}
+                             addPost={props.addPost} />}/>
                     <Route path={"/profile"}
-                           component={() => <Profile
+                           element={ <Profile
                                posts={props.state.profilePage.posts}
-                           />
-                           }/>
+                               addPost={props.addPost}/>}/>
 
-                    <Route path='/post' component={Post}/>
-                    <Route path='/audio' component={Music}/>
-                    <Route path='/settings' component={Setting}/>
 
+              </Routes>
                 </div>
-        </Route>
 
 
     );

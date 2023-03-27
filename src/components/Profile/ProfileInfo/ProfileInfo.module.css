@@ -1,7 +1,13 @@
 .descriptionBlock {
     padding: 10px;
+    width: 500px ;
 }
 
 .avatar {
     align-items: center;
+}
+.avatar img {
+    width: 400px; /* Ширина изображений */
+    height: 200px; /* Высота изображении */
+    object-fit: cover; /* Вписываем фотографию в область */
 }

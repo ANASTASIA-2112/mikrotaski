@@ -6,20 +6,13 @@ import DialogItem from "./DialogItem/DialodItem";
 
 
 
-
- type MessageType = {
-    id: number
-    message: string
-}
- type DialogType = {
-    id: number
-    name: string
-}
-
 export const  Dialogs = (props:DialogsPageType) =>{
 
-    let dialogElements = props.dialogs.map(el => <DialogItem key={el.id} name={el.name}  id={el.id}/>)
-    let messagesElement = props.message.map(el => <Message key={el.id} message={el.message} id={el.id}/>)
+    let dialogElements = props.dialogs.map(el => <DialogItem key={el.id} name={el.name}   id={el.id}/>)
+    let messagesElement = props.message.map(el => <Message key={el.id} id={el.id} message={el.message}/>)
+
+
+
 
     return (
         <div className={s.dialogs}>
