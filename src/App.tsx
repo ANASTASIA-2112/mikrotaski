@@ -3,7 +3,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import {Route, Routes} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import {StateType} from "./redux/state";
+import { StateType} from "./redux/state";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import Profile from "./components/Profile/Ptofile";
 
@@ -11,6 +11,8 @@ import Profile from "./components/Profile/Ptofile";
 type AppPropsType = {
     state: StateType
     addPost: (postAdd:string) => void
+    profilePage:(newTextPost:string) => void
+
 }
 
 
@@ -36,7 +38,9 @@ export const App = (props:AppPropsType) => {
                              addPost={props.addPost} />}/>
                     <Route path={"/profile"}
                            element={ <Profile
-                               posts={props.state.profilePage.posts}
+                               newTextPost={props.state.profilePage.newTextPost}
+                               profilePage={props.profilePage}
+                               post={props.state.profilePage.posts}
                                addPost={props.addPost}/>}/>
 
 

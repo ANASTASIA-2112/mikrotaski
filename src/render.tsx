@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
-import {addPost} from "./redux/state";
+import {addPost, profilePage} from "./redux/state";
 
 
 export let rerenderEntireTree=(state:any)=> {
@@ -14,7 +14,7 @@ export let rerenderEntireTree=(state:any)=> {
     root.render(
         <BrowserRouter>
             <React.StrictMode>
-                <App state={state}  addPost={addPost}/>
+                <App state={state}  addPost={addPost} profilePage={profilePage}/>
             </React.StrictMode>
         </BrowserRouter>
     );
