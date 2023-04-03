@@ -3,21 +3,25 @@ import './App.css';
 import Header from "./components/Header/Header";
 import {Route, Routes} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import { StateType} from "./redux/state";
+import {StoreType} from "./redux/state";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import Profile from "./components/Profile/Ptofile";
-import {AppBar, Box, Grid, Paper, styled} from "@mui/material";
 
 
-type AppPropsType = {
-    state: StateType
-    addPost: (postAdd:string) => void
-    profilePage:(newTextPost:string) => void
 
+
+
+type PropsType ={
+    store:StoreType
 }
 
 
-export const App = (props:AppPropsType) => {
+
+
+
+export const App = (props:PropsType) => {
+
+    const state= props.store.getState();
 
     return (
 
@@ -25,24 +29,22 @@ export const App = (props:AppPropsType) => {
                 <div className='app-wrapper'>
                     <Header/>
                 </div>
-
-    <AppBar position="static">
                 <nav className='nav'>
                     <Navbar />
                 </nav>
-    </AppBar>
+
               <Routes>
                     <Route path={"/dialogs"}
                        element={ <Dialogs
-                             dialogs={props.state.dialogsPage.dialogs}
-                             message={props.state.dialogsPage.message}
-                             addPost={props.addPost} />}/>
+                             dialogs={state.dialogsPage.dialogs}
+                             message={state.dialogsPage.message}
+                             addPost={props.store.addPost.bind(props.store)} />}/>
                     <Route path={"/profile"}
                            element={ <Profile
-                               newTextPost={props.state.profilePage.newTextPost}
-                               profilePage={props.profilePage}
-                               post={props.state.profilePage.posts}
-                               addPost={props.addPost}/>}/>
+                               newTextPost={state.profilePage.newTextPost}
+                               profilePage={props.store._onChange.bind(props.store)}
+                               post={state.profilePage.posts}
+                               addPost={props.store.addPost.bind(props.store)}/>}/>
 
               </Routes>
                 </div>

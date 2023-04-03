@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 import {BrowserRouter} from "react-router-dom";
 import React from "react";
 import App from "./App";
-import {addPost, profilePage, state} from "./redux/state";
+import {store} from "./redux/state";
 
 export let rerenderEntireTree=()=> {
 
@@ -12,7 +12,7 @@ export let rerenderEntireTree=()=> {
     root.render(
         <BrowserRouter>
             <React.StrictMode>
-                <App state={state}  addPost={addPost} profilePage={profilePage} />
+                <App store={store}  />
             </React.StrictMode>
         </BrowserRouter>
     );
