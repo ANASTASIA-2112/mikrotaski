@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { StateType} from "./redux/state";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import Profile from "./components/Profile/Ptofile";
+import {AppBar, Box, Grid, Paper, styled} from "@mui/material";
 
 
 type AppPropsType = {
@@ -18,7 +19,6 @@ type AppPropsType = {
 
 export const App = (props:AppPropsType) => {
 
-
     return (
 
             <div className='app-wrapper-content'>
@@ -26,10 +26,11 @@ export const App = (props:AppPropsType) => {
                     <Header/>
                 </div>
 
+    <AppBar position="static">
                 <nav className='nav'>
                     <Navbar />
                 </nav>
-
+    </AppBar>
               <Routes>
                     <Route path={"/dialogs"}
                        element={ <Dialogs
@@ -42,7 +43,6 @@ export const App = (props:AppPropsType) => {
                                profilePage={props.profilePage}
                                post={props.state.profilePage.posts}
                                addPost={props.addPost}/>}/>
-
 
               </Routes>
                 </div>

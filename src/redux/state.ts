@@ -1,55 +1,39 @@
-import {rerenderEntireTree} from "../render";
+let onChange =()=> {
+
+}
+
 
 
 
 export type MessageType = {
     id:number
     message: string
-
-
-
-
-
 }
-
 export type DialogType = {
     id: number
     name: string
-
 }
 export type PostType = {
     id: number
     message: string
     likeCount: number
-
 }
-
-
-
 export type ProfilePageType = {
     posts: Array<PostType>
     addPost: (postAdd:any) => void
     profilePage:(newTextPost:any) => void
     newTextPost:string
-
-
-
 }
+
 export type DialogsPageType = {
     dialogs: Array<DialogType>
     message: Array<MessageType>
     addPost:(postAdd:string)=>void
-
-
-
-
 }
 export type SideBarPropsType = {
     id: number
     name: string
 }
-
-
 export type StateType = {
     profilePage: {
         posts: Array<PostType>
@@ -62,6 +46,7 @@ export type StateType = {
         message: Array<MessageType>
     }
 }
+
 export let state: StateType = {
     profilePage: {
         posts: [
@@ -95,8 +80,7 @@ export let state: StateType = {
     },
 
 }
-
-export let addPost=(postAdd:any)=>{
+export const addPost=(postAdd:any)=>{
     let newPost={
         id: 0,
         message:postAdd,
@@ -105,15 +89,19 @@ export let addPost=(postAdd:any)=>{
 
 
         state.profilePage.posts.unshift(newPost)
-        rerenderEntireTree(state);
+       onChange();
 
 
 }
+
 export const profilePage=(newTextPost:any) => {
         state.profilePage.newTextPost= newTextPost;
-        rerenderEntireTree(state);
-
+        onChange();
+}
+export const subscribe=(observe:()=>void)=> {
+    onChange=observe;
 
 }
+
 
 export default state;

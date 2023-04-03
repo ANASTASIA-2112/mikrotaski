@@ -1,8 +1,10 @@
 import React from 'react';
 import './index.css';
+import {subscribe} from "./redux/state";
 import {rerenderEntireTree} from "./render";
-import state from "./redux/state";
 
 
 
-rerenderEntireTree(state);
+subscribe(rerenderEntireTree);
+
+

@@ -1,12 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ReactDOM from "react-dom/client";
 import {BrowserRouter} from "react-router-dom";
-import {addPost, profilePage} from "./redux/state";
+import React from "react";
+import App from "./App";
+import {addPost, profilePage, state} from "./redux/state";
 
-
-export let rerenderEntireTree=(state:any)=> {
+export let rerenderEntireTree=()=> {
 
     const root = ReactDOM.createRoot(
         document.getElementById('root') as HTMLElement
@@ -14,8 +12,10 @@ export let rerenderEntireTree=(state:any)=> {
     root.render(
         <BrowserRouter>
             <React.StrictMode>
-                <App state={state}  addPost={addPost} profilePage={profilePage}/>
+                <App state={state}  addPost={addPost} profilePage={profilePage} />
             </React.StrictMode>
         </BrowserRouter>
     );
 }
+
+rerenderEntireTree();
